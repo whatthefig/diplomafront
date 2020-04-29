@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск новостей</title> 
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" />
+    <link rel="icon" href="<%= require('./images/favicon/N.svg').default %>">
+</head>
+<body>
+    <div class="page">
+        <header class="header hidden">
+            <img src="<%= require('./images/logo.svg').default %>" class='header__logo' alt="логотип">
+            <div class="header__navigation">
+                <a href="./index.html" class="header__button header__button_underlined header__button_theme-white">Главная</a>
+                <button class="header__button header__button_circled header__button_theme-white">Авторизоваться</button>
+                <button class="header__menu">
+                    <img src="<%= require('./images/menu.svg').default %>" class='header__logo header__logo_menued' alt="меню">
+                </button>
+            </div>
+        </header>
+
+        <header class="header">
+            <img src="<%= require('./images/logo.svg').default %>" class='header__logo' alt="логотип">
+            <div class="header__navigation header__navigation_logged-in">
+                <a href="./index.html" class="header__button header__button_underlined header__button_theme-white">Главная</a>
+                <a href="./secondary/index.html" class="header__button header__button_theme-grey">
+                    Сохранённые статьи
+                </a>
+                <button class="header__button header__button_circled header__button_theme-white">
+                    Грета
+                    <img class="header__logout header__logout_theme-white" src="<%= require('./images/logout.svg').default %>" alt="лого выход">
+                </button>
+                <button class="header__menu">
+                    <img src="<%= require('./images/menu.svg').default %>" class='header__logo header__logo_menued' alt="меню">
+                </button>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="search">
+                <h1 class="search__header">Что в мире<br>творится?</h1>
+                <p class="search__info">
+                    Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.
+                </p>
+                <form class="search__form">
+                    <input type="search" name="search" class="search__input" placeholder="Введите тему новости">
+                    <button class="search__button">Искать</button>
+                </form>
+            </section>
+
+            <section class="preloader">
+                <i class="preloader__circle"></i>
+                <h3 class="preloader__finding">
+                    Идет поиск новостей...
+                </h3>
+            </section>
+
+            <section class="no-results">
+                <div class="no-results__face">
+                  <img class="no-results__face-eye-left" src="<%= require('./images/dot.svg').default %>" alt="">
+                  <img class="no-results__face-eye-right" src="<%= require('./images/dot.svg').default %>" alt="">
+                  <img class="no-results__face-mouth" src="<%= require('./images/mouth.svg').default %>" alt="">
+                  <img class="no-results__face-vector" src="<%= require('./images/Vector.svg').default %>" alt="">
+                  <img class="no-results__face-circle" src="<%= require('./images/circle.svg').default %>" alt="">
+                </div>
+                <h3 class="no-results__header">Ничего не найдено</h3>
+                <p class="no-results__discription">К сожалению, по вашему запросу ничего не найдено.</p>
+              </section>
+
+            <section class="results">
+                <h2 class="content__header">
+                    Результаты поиска
+                </h2>
+                <div class="content__cards">
+                    <div class="content__card">
+                        <img src="<%= require('./images/card/image_08.png').default %>" class="content__image" alt="photo">
+                        <div class="content__icon-container">
+                            <p class="content__icon-text">Войдите, чтобы сохранять статьи</p>
+                            <input id="icon1" type="checkbox" name="icon" value="">
+                            <label for="icon1" class="content__icon"></label>
+                        </div>
+                        <div class="content__article">
+                            <div class="content__article-container">
+                                <p class="content__article-date">
+                                    2 августа, 2019
+                                </p>
+                                <h3 class="content__article-header">
+                                    Национальное достояние – парки
+                                </h3>
+                                <p class="content__article-text">
+                                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться 
+                                    система национальных парков – охраняемых территорий, где и сегодня каждый может 
+                                    приобщиться к природе.
+                                </p>
+                            </div>
+                            <p class="content__article-source">ЛЕНТА.РУ</p>
+                        </div>
+                    </div>
+                    <div class="content__card">
+                        <img src="<%= require('./images/card/image_08.png').default %>" class="content__image" alt="photo">
+                        <div class="content__icon-container">
+                            <p class="content__icon-text">Войдите, чтобы сохранять статьи</p>
+                            <input id="icon2" type="checkbox" name="icon" value="">
+                            <label for="icon2" class="content__icon"></label>
+                        </div>
+                        <div class="content__article">
+                            <div class="content__article-container">
+                                <p class="content__article-date">
+                                    2 августа, 2019
+                                </p>
+                                <h3 class="content__article-header">
+                                    Национальное достояние – парки
+                                </h3>
+                                <p class="content__article-text">
+                                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться 
+                                    система национальных парков – охраняемых территорий, где и сегодня каждый может 
+                                    приобщиться к природе.
+                                </p>
+                            </div>
+                            <p class="content__article-source">ЛЕНТА.РУ</p>
+                        </div>
+                    </div>
+                    <div class="content__card">
+                        <img src="<%= require('./images/card/image_08.png').default %>" class="content__image" alt="photo">
+                        <div class="content__icon-container">
+                            <p class="content__icon-text">Войдите, чтобы сохранять статьи</p>
+                            <input id="icon3" type="checkbox" name="icon" value="">
+                            <label for="icon3" class="content__icon"></label>
+                        </div>
+                        <div class="content__article">
+                            <div class="content__article-container">
+                                <p class="content__article-date">
+                                    2 августа, 2019
+                                </p>
+                                <h3 class="content__article-header">
+                                    Национальное достояние – парки
+                                </h3>
+                                <p class="content__article-text">
+                                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться 
+                                    система национальных парков – охраняемых территорий, где и сегодня каждый может 
+                                    приобщиться к природе.
+                                </p>
+                            </div>
+                            <p class="content__article-source">ЛЕНТА.РУ</p>
+                        </div>
+                    </div>         
+                </div>
+                <button class="result__button">Показать еще</button>
+            </section>
+
+            <section class="popup hidden">
+                <div class="popup__content hidden">
+                  <img src="<%= require('./images/close.svg').default %>" alt="" class="popup__close">
+                  <h3 class="popup__title">Вход</h3>
+                  <form class="popup__form" name="new" novalidate>
+                      <div>
+                        <h4 class="popup__input-title">Email</h4>
+                        <input id = "email" type="email" required name="email" class="popup__input" placeholder="Введите почту" validate>
+                        <p id="error-email" class="error-message">Неправильный формат email</p>
+                      </div>
+                      <div>
+                        <h4 class="popup__input-title">Пароль</h4>
+                        <input id = "password" type="text" minlength="2" maxlength="30" required name="password" class="popup__input" placeholder="Введите пароль">
+                        <p id="error-password" class="error-message hidden"></p>
+                      </div>
+                  </form>
+                  <button type="submit" class="popup__signin" disabled>Войти</button>
+                  <div class="popup__signup">
+                    <p class="popup__or">или</p>
+                    <button class="popup__signup-button">Зарегистрироваться</button>
+                  </div>
+                </div>
+
+                <div class="popup__content">
+                    <img src="<%= require('./images/close.svg').default %>" alt="" class="popup__close">
+                    <h3 class="popup__title">Регистрация</h3>
+                    <form class="popup__form" name="new" novalidate>
+                        <div>
+                            <h4 class="popup__input-title">Email</h4>
+                            <input id = "email2" type="text" required name="email" class="popup__input" placeholder="Введите почту">
+                            <p id="error_email2" class="error-message">Неправильный формат email</p>
+                        </div>
+                        <div>
+                            <h4 class="popup__input-title">Пароль</h4>
+                            <input id = "password2" type="text" minlength="2" maxlength="30" required name="password" class="popup__input" placeholder="Введите пароль">
+                            <p id="error-password2" class="error-message"></p>
+                        </div>
+                        <div>
+                            <h4 class="popup__input-title">Имя</h4>
+                            <input id = "name" type="text" minlength="2" maxlength="30" required name="name" class="popup__input" placeholder="Введите своё имя">
+                        </div>
+                    </form>
+                    <div class="popup__button-block">
+                        <p id="error-password2" class="error-message error-message_formed">Такой пользователь уже есть</p>
+                        <button class="popup__button popup__button_formed" disabled>Зарегистрироваться</button>
+                    </div>
+                    <div class="popup__signup">
+                      <p class="popup__or">или</p>
+                      <button class="popup__signup-button">Войти</button>
+                    </div>
+                </div>
+
+                <div class="popup__content hidden">
+                    <img src="<%= require('./images/close.svg').default %>" alt="" class="popup__close">
+                    <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+                    <button class="popup__signin-button">Выполнить вход</button>
+                </div>
+            </section>
+                
+            <section class="menu hidden">
+                <div class="header menu-theme">
+                    <img src="<%= require('./images/logo.svg').default %>" class='header__logo' alt="логотип">
+                    <img src="<%= require('./images/close.svg').default %>" class='header__logo' alt="меню">
+                </div>
+
+                <div class="menu__navigation menu__navigation_logged-out menu-theme hidden">
+                    <a href="./index.html" class="header__button header__button_theme-white header__button_menued">Главная</a>
+                    <button class="header__button header__button_circled header__button_theme-white header__button_menued">Авторизоваться</button>
+                </div>
+
+                <div class="menu__navigation menu-theme">
+                    <a href="./index.html" class="header__button header__button_theme-white header__button_menued">Главная</a>
+                    <a href="./secondary/index.html" class="header__button header__button_theme-white header__button_menued">
+                        Сохранённые статьи
+                    </a>
+                    <button class="header__button header__button_circled header__button_theme-white header__button_menued">
+                        Грета
+                        <img class="header__logout header__logout_theme-white" src="<%= require('./images/logout.svg').default %>" alt="лого выход">
+                    </button>
+                </div>
+            </section>
+           
+            <section class="author">
+                <img src="<%= require('./images/avatar.png').default %>" class="author__photo" alt="фото автора">
+                <div class="author__content">
+                  <h3 class="content__header">Об авторе</h3>
+                  <p class="author__description">
+                    Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, 
+                    чем вы занимаетесь, какими технологиями разработки владеете.
+                  </p>
+                  <p class="author__description">
+                    Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, 
+                    и чем можете помочь потенциальным заказчикам.
+                  </p>
+                </div>
+              </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copyrights">
+              © 2020 Supersite, Powered By News API
+            </p>
+            <div class="footer__navigation">
+                <a href="./index.html" class="footer__link">Главная</a>
+                <div class="footer__link_last">
+                    <a target="_blank" href="https://praktikum.yandex.ru" class="footer__link">Яндекс.Практикум</a>
+                </div>
+                <div class="footer__icons">
+                    <a target="_blank" href="https://github.com/">
+                        <img src="<%= require('./images/icon/gh.svg').default %>" class="footer__icon" alt="github">
+                    </a>
+                    <a target="_blank" href="https://ru-ru.facebook.com/">
+                        <img src="<%= require('./images/icon/fb.svg').default %>"" class="footer__icon" alt="facebook">
+                    </a>
+                </div>
+            </div>
+          </footer>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

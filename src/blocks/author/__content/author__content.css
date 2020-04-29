@@ -1,0 +1,16 @@
+.author__content{
+    width: 85%;
+    padding: 51px 0 0 0;
+}
+
+@media screen and (max-width:1280px) {
+    .author__content{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:971px) {
+    .author__content{
+        padding: 0 0 9px 0;
+    }
+}

@@ -1,0 +1,23 @@
+.articles__header{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #B6BCBF;
+    margin: 0 0 28px 0;
+}
+
+@media screen and (max-width:768px) {
+    .articles__header{
+        font-size: 14px;
+        margin: 0 0 16px 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .articles__header{
+        font-size: 12px;
+    }
+}

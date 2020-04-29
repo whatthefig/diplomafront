@@ -1,0 +1,14 @@
+.popup__signin-button{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #2F71E5;
+    margin: 14px 0 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 0;
+}

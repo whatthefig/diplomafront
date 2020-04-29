@@ -1,0 +1,5 @@
+@media screen and (max-width:971px) {
+    .content__icon-container_saved-articles{
+        grid-gap: 0;
+    }
+}

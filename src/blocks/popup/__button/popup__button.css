@@ -1,0 +1,19 @@
+.popup__button {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  width: 100%;
+  min-height: 64px;
+  border: 0;
+  color: rgba(0, 0, 0, .4);
+  margin-top: 8px;
+  background: #E6E8EB;
+  border-radius: 100px;
+  align-self: center;
+}
+
+.popup__button_active {
+  background-color: #000;
+  color: #fff;
+}

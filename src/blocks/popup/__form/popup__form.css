@@ -1,0 +1,7 @@
+.popup__form {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: initial;
+  grid-gap: 31px;
+}
+

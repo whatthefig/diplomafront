@@ -1,0 +1,7 @@
+.content__card{
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #FFF;
+    position: relative;
+}

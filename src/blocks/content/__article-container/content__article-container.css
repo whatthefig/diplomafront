@@ -1,0 +1,18 @@
+.content__article-container{
+    position: relative;
+    width: 88%;
+    margin: 20px auto 0;
+}
+
+@media screen and (max-width:768px) {
+    .content__article-container{
+        width: 85.7%;
+        margin: 16px auto 0;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .content__article-container{
+        width: 88.89%;
+    }
+}

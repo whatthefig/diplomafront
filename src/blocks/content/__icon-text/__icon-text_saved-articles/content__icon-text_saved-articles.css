@@ -1,0 +1,10 @@
+.content__icon-text_saved-articles{
+    font-size: 12px;
+}
+
+
+@media screen and (max-width:971px) {
+    .content__icon-text_saved-articles{
+        display: none;
+    }
+}

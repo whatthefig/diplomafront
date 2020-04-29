@@ -1,0 +1,19 @@
+.content__icon-text{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #000;
+    align-items: center;
+    margin: 0;
+    padding: 0 13px;
+    height: 40px;
+    background: #FFF;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:768px) {
+    .content__icon-text{
+        width:135px;
+    }
+}

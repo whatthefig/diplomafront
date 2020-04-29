@@ -1,0 +1,21 @@
+.articles__text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 30px 0 0 0;
+}
+
+@media screen and (max-width:768px) {
+    .articles__text{
+        font-size: 14px;
+        margin: 16px 0 0 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .articles__text{
+        font-size: 18px;
+        margin: 16px 0 0 0;
+    }
+}

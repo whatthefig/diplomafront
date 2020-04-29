@@ -1,0 +1,22 @@
+.header__button_circled{
+    display: flex;
+    border: 1px solid;
+    border-radius: 100px;
+    padding: 0 16px 0 16px;
+    height: 50px;
+    align-items: center;
+}
+
+@media screen and (max-width:768px) {
+    .header__button_circled {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:649px) {
+    .header__button_circled {
+        display: none;
+        width: 100%;
+        height: 56px;
+    }
+}

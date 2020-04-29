@@ -1,0 +1,20 @@
+.content__article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 304px;
+    margin-top: -4px;
+}
+
+
+@media screen and (max-width:768px) {
+    .content__article{
+        height: 270px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .content__article{
+        height: 244px;
+    }
+}
