@@ -7,12 +7,6 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-}
-
-.content__icon:hover{
-    background-image: url(../../../images/flag.svg);
-}
-
-input[name="icon"]:checked + .content__icon{
-    background-image: url(../../../images/flag-blue.svg);
+    border: none;
+    z-index: 1;
 }

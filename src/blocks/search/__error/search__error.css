@@ -10,16 +10,25 @@
     }
 }
 
-.error-message{
-    display: none;
+.search__error{
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
     margin: 0;
-    color: #FF0000;
+    color: #fff;
     position: absolute;
-	  text-align: left;
+    top: 70px;
+    object-fit: contain;
+	text-align: center;
     animation: errors .1s ease-in-out;
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width:400px) {
+    .search__error{
+        top: 130px;
+    }
 }

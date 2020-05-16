@@ -42,13 +42,17 @@ a {
 .hidden{
   display: none;
 }
+.gap{
+  grid-column-gap: 5px;
+}
 
-input[name="icon"] {
+.hidden-card{
   display: none;
 }
 
-button:focus {
-  outline: none;
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .bolt{

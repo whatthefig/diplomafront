@@ -1,0 +1,5 @@
+.popup__input-container{
+    display: grid;
+    grid-template-columns: initial;
+    grid-gap: 30px;
+}

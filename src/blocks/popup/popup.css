@@ -10,8 +10,9 @@
 @import url(./__signup-button/popup__signup-button.css);
 @import url(./__signup/popup__signup.css);
 @import url(./__signin-button/popup__signin-button.css);
-@import url(./__button-block/popup__button-block.css);
-@import url(./__button/__button_formed/popup__button_formed.css);
+@import url(./__button/__button_active/popup__button_active.css);
+@import url(./__form/__form_signup/popup__form_signup.css);
+@import url(./__input-container/popup__input-container.css);
 
 .popup {
   position: fixed;
@@ -23,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 @media screen and (max-width:380px) {

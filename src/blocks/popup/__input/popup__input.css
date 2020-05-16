@@ -13,5 +13,10 @@
   height: 30px;
 }
 
-input::-moz-placeholder { color: rgba(0, 0, 0, .2);}
-input::-webkit-input-placeholder { color: rgba(0, 0, 0, .2);}
+.popup__input:invalid:not(:placeholder-shown) + .error-message {
+	display: block;
+}
+
+.popup__input:focus {
+  border-bottom: 1px solid #000;
+}

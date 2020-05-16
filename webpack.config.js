@@ -16,7 +16,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name]/[name].[chunkhash].js',
     // eslint-disable-next-line no-dupe-keys
-    filename: (chunkData) => (chunkData.chunk.name === 'main' ? '[name].js' : '[name]/[name].js'),
   },
   module: {
     rules: [

@@ -1,3 +1,5 @@
 .error-message_formed{
     text-align: center;
+    display: block;
+    position: relative;
 }

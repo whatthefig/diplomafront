@@ -11,6 +11,7 @@
   background: #E6E8EB;
   border-radius: 100px;
   align-self: center;
+  padding: 0;
 }
 
 .popup__button_active {
