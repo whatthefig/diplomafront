@@ -1,0 +1,18 @@
+@import url(./__header/articles__header.css);
+@import url(./__text/articles__text.css);
+
+.articles{
+    padding: 40px 0 56px 102px;
+}
+
+@media screen and (max-width:768px) {
+    .articles{
+        padding: 24px 5.22% 32px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .articles{
+        padding: 8px 5% 32px;
+    }
+}

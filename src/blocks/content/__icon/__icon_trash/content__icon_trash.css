@@ -1,0 +1,7 @@
+.content__icon_trash{
+    background-image: url(../../../../images/trash-grey.svg);
+}
+
+.content__icon_trash:hover{
+    background-image: url(../../../../images/trash.svg);
+}

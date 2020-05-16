@@ -1,0 +1,26 @@
+@import url(./__copyrights/footer__copyrights.css);
+@import url(./__icon/footer__icon.css);
+@import url(./__icons/footer__icons.css);
+@import url(./__link/footer__link.css);
+@import url(./__navigation/footer__naviagtion.css);
+@import url(./__link/__link_last/footer__link_last.css);
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto;
+    padding: 30px 7.22%;
+}
+
+@media screen and (max-width:768px) {
+    .footer{
+        padding: 21px 5.22%;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .footer{
+        padding: 20px 5%;
+        flex-wrap: wrap-reverse;
+    }
+}

@@ -1,0 +1,25 @@
+@keyframes errors {
+    from {
+      margin-top: -5px;
+      opacity: .1; 
+    }
+  
+    to {
+      margin-top: 10px;
+      opacity: 1;
+    }
+}
+
+.error-message{
+    display: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    color: #FF0000;
+    position: absolute;
+	  text-align: left;
+    animation: errors .1s ease-in-out;
+}

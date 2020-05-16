@@ -1,0 +1,28 @@
+@import url(./__content/author__content.css);
+@import url(./__description/author__description.css);
+@import url(./__photo/author__photo.css);
+
+.author{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 56px;
+    padding: 80px 7.22%;
+    background-color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .author{
+        padding: 40px 5.22% 61px;
+        grid-template-columns: auto auto;
+        grid-gap: 32px;
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    .author{
+        grid-template-columns: auto;
+        grid-gap: 24px;
+        padding: 32px 5% 80px;
+    }
+}

@@ -1,0 +1,38 @@
+.content__tag{
+    position: absolute;
+    top: 24px;
+    left: 6%;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    align-items: center;
+    margin: 0;
+    padding: 0 13px;
+    height: 40px;
+    background: #FFF;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:768px) {
+    .content__tag{
+        top: 8px;
+        left: 8px;
+    }
+}
+
+@media screen and (max-width:765px) {
+    .content__tag{
+        top: 24px;
+        left: 6%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .content__tag{
+        top: 16px;
+        left: 16px;
+    }
+}

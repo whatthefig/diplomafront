@@ -1,0 +1,26 @@
+.content__article-source{
+    position: absolute;
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #B6BCBF;
+    margin: 0;
+    bottom: 20px;
+    left: 6%;
+}
+
+@media screen and (max-width:768px) {
+    .content__article-source{
+        bottom: 16px;
+        left: 7.15%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .content__article-source{
+        bottom: 16px;
+        left: 5.55%;
+    }
+}

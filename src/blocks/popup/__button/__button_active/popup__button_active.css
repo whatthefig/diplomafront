@@ -1,0 +1,11 @@
+.popup__button_active {
+    color: white;
+    background: #2F71E5;
+}
+
+.popup__button_active:hover{
+    background: #347EFF;
+}
+.popup__button_active:active{
+    background: #2A65CC;
+}

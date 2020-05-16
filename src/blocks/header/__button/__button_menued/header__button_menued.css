@@ -1,0 +1,5 @@
+@media screen and (max-width:649px) {
+    .header__button_menued {
+        display: flex;
+    }
+}

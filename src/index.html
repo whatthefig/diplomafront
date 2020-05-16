@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск новостей</title> 
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" />
+    <link rel="icon" href="<%= require('./images/favicon/N.svg').default %>">
+</head>
+<body>
+    <div class="page">
+        <header class="header header-logged-out">
+            <img src="<%= require('./images/logo.svg').default %>" class='header__logo' alt="логотип">
+            <div class="header__navigation">
+                <a href="./index.html" class="header__button header__button_underlined header__button_theme-white">Главная</a>
+                <button class="header__button header__button_circled header__button_theme-white header__button-login">Авторизоваться</button>
+                <button class="header__menu">
+                    <img src="<%= require('./images/menu.svg').default %>" class='header__logo header__logo_menued' alt="меню">
+                </button>
+            </div>
+        </header>
+
+        <header class="header header-logged-in hidden">
+            <img src="<%= require('./images/logo.svg').default %>" class='header__logo' alt="логотип">
+            <div class="header__navigation header__navigation_logged-in">
+                <a href="./index.html" class="header__button header__button_underlined header__button_theme-white">Главная</a>
+                <a href="./secondary/index.html" class="header__button header__button_theme-grey">
+                    Сохранённые статьи
+                </a>
+                <button class="header__button header__button_circled header__button_theme-white header__button-logout">
+                    <span class="header-button-text">Грета</span>
+                    <img class="header__logout header__logout_theme-white" src="<%= require('./images/logout.svg').default %>" alt="лого выход">
+                </button>
+                <button class="header__menu">
+                    <img src="<%= require('./images/menu.svg').default %>" class='header__logo header__logo_menued-logged' alt="меню">
+                </button>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="search">
+                <h1 class="search__header">Что в мире<br>творится?</h1>
+                <p class="search__info">
+                    Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.
+                </p>
+                <form class="search__form" novalidate>
+                    <input type="search" name="search" id="search" class="search__input"  minlength="1" placeholder="Введите тему новости" required>
+                    <span class="search__error hidden">Нужно ввести ключевое слово</span>
+                    <button class="search__button">Искать</button>
+                </form>
+            </section>
+
+            <section class="preloader hidden">
+                <i class="preloader__circle"></i>
+                <h3 class="preloader__finding">
+                    Идет поиск новостей...
+                </h3>
+            </section>
+
+            <section class="no-results hidden">
+                <div class="no-results__face">
+                  <img class="no-results__face-eye-left" src="<%= require('./images/dot.svg').default %>" alt="face-eye-left">
+                  <img class="no-results__face-eye-right" src="<%= require('./images/dot.svg').default %>" alt="face-eye-right">
+                  <img class="no-results__face-mouth" src="<%= require('./images/mouth.svg').default %>" alt="face-mouth">
+                  <img class="no-results__face-vector" src="<%= require('./images/Vector.svg').default %>" alt="face-vector">
+                  <img class="no-results__face-circle" src="<%= require('./images/circle.svg').default %>" alt="face-circle">
+                </div>
+                <h3 class="no-results__header">Ничего не найдено</h3>
+                <p class="no-results__discription">К сожалению, по вашему запросу ничего не найдено.</p>
+              </section>
+
+            <section class="results hidden">
+                <h2 class="content__header">
+                    Результаты поиска
+                </h2>
+
+                <div class="content__cards">
+                    <!-- <div class="content__card">
+                        <div  class="content__image"></div>
+                        <div class="content__icon-container">
+                            <p class="content__icon-text">Войдите, чтобы сохранять статьи</p>
+                            <button class="content__icon "></button>
+                        </div>
+                        
+                        
+                            <div class="content__article">
+                                <p class="content__article-date">
+                                    2 августа, 2019
+                                </p>
+                                <h3 class="content__article-header">
+                                    Национальное достояние – парки Национальное достояние – парки Национальное достояние – парки Национальное достояние – парки Национальное достояние – парки Национальное достояние – парки
+                                </h3>
+                                <p class="content__article-text">
+                                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться 
+                                    система национальных парков – охраняемых территорий, где и сегодня каждый может 
+                                    приобщиться к природе.В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться 
+                                    система национальных парков – охраняемых территорий, где и сегодня каждый может 
+                                    приобщиться к природе.
+                                </p>
+                            </div>
+                            <p class="content__article-source">ЛЕНТА.РУ</p>
+                        
+                    </div>
+                    <div class="content__card">
+                        <div  class="content__image"></div>
+                        <div class="content__icon-container">
+                            <p class="content__icon-text">Войдите, чтобы сохранять статьи</p>
+                            <button class="content__icon content__icon_chosen"></button>
+                        </div>
+                        
+                            <div class="content__article">
+                                <p class="content__article-date">
+                                    2 августа, 2019
+                                </p>
+                                <h3 class="content__article-header">
+                                    Национальное достояние – парки
+                                </h3>
+                                <p class="content__article-text">
+                                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться 
+                                    система национальных парков – охраняемых территорий, где и сегодня каждый может 
+                                    приобщиться к природе.
+                                </p>
+                                
+                            </div>
+                            <p class="content__article-source">ЛЕНТА.РУ</p>
+                        
+                    </div> -->
+                </div>
+                <button class="result__button">Показать еще</button>
+            </section>
+
+            <section class="popups">
+                <div class="popup popup-signin hidden">
+                    <div class="popup__content">
+                        <img src="<%= require('./images/close.svg').default %>" alt="close" class="popup__close popup-signin-close">
+                        <h3 class="popup__title">Вход</h3>                    
+                        <form name="signin" class="popup__form">
+                            <div class="popup__input-container">
+                                <div>
+                                    <label for="email" class="popup__input-title">Email</label>
+                                    <input id = "email" type="email" required name="email" class="popup__input" pattern="^([\w\.]+-?){2,}@([a-z]+-?){2,}\.[a-z]{2,4}$" placeholder="Введите почту">
+                                    <p class="error-message">Неправильный формат email</p>
+                                </div>
+                                <div>
+                                    <label for="password" class="popup__input-title">Пароль</label>
+                                    <input id = "password" type="password" minlength="8" maxlength="30" required name="password" class="popup__input" placeholder="Введите пароль">
+                                    <p id="error-password" class="error-message hidden"></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="error-message error-message_formed hidden error-message-signin"></p>
+                                <button type="submit" class="popup__button popup__button-login" disabled>Войти</button>
+                            </div>
+                        </form>
+                        <div class="popup__signup">
+                            <p class="popup__or">или</p>
+                            <button class="popup__signup-button">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup popup-signup hidden">
+                    <div class="popup__content">
+                        <img src="<%= require('./images/close.svg').default %>" alt="close" class="popup__close popup-signup-close">
+                        <h3 class="popup__title">Регистрация</h3>                        
+                        <form name="signup" id="signup" class="popup__form popup__form_signup">
+                            <div class="popup__input-container">
+                                <div class="popup__input-email">
+                                    <label for="email2" class="popup__input-title">Email</label>
+                                    <input id = "email2" type="email" required name="email" class="popup__input" pattern="^([\w\.]+-?){2,}@([a-z]+-?){2,}\.[a-z]{2,4}$" placeholder="Введите почту">
+                                    <p class="error-message">Неправильный формат email</p>
+                                </div>
+                                <div class="popup__input-password">
+                                    <label for="password2" class="popup__input-title">Пароль</label>
+                                    <input id = "password2" type="password" minlength="8" maxlength="30" required name="password" class="popup__input" placeholder="Введите пароль">
+                                    <p class="error-message">Должно быть не менее 8 символов</p>
+                                </div>
+                                <div class="popup__input-name">
+                                    <label for="name" class="popup__input-title">Имя</label>
+                                    <input id = "name" type="text" minlength="2" maxlength="30" required name="name" class="popup__input" placeholder="Введите своё имя">
+                                    <p class="error-message">Должно быть не менее 2 символов</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="error-message error-message_formed error-message-signup hidden">Такой пользователь уже есть</p>
+                                <button type="submit" class="popup__button popup__button-signup" disabled>Зарегистрироваться</button>
+                            </div>
+                        </form>
+                        <div class="popup__signup">
+                            <p class="popup__or">или</p>
+                            <button class="popup__signup-button popup__signin-button-js">Войти</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup popup-success hidden">
+                    <div class="popup__content">
+                        <img src="<%= require('./images/close.svg').default %>" alt="close" class="popup__close popup-success-close">
+                        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+                        <button class="popup__signin-button">Выполнить вход</button>
+                    </div>
+                </div>
+            </section>
+                
+            <section class="menu hidden">
+                <div class="header menu-theme">
+                    <img src="<%= require('./images/logo.svg').default %>" class='header__logo' alt="логотип">
+                    <img src="<%= require('./images/close.svg').default %>" class='header__logo header__logo-close' alt="close">
+                </div>
+
+                <div class="menu__navigation menu__navigation_logged-out menu-theme">
+                    <a href="./index.html" class="header__button header__button_theme-white header__button_menued">Главная</a>
+                    <button class="header__button header__button_circled header__button_theme-white header__button_menued header__button-login-menu">Авторизоваться</button>
+                </div>
+
+                <div class="menu__navigation menu__navigation_logged-in menu-theme">
+                    <a href="./index.html" class="header__button header__button_theme-white header__button_menued">Главная</a>
+                    <a href="./secondary/index.html" class="header__button header__button_theme-white header__button_menued">
+                        Сохранённые статьи
+                    </a>
+                    <button class="header__button header__button_circled header__button_theme-white header__button_menued menu-logout">
+                        <span class="menu-logout-name">Выход</span>
+                        <img class="header__logout header__logout_theme-white" src="<%= require('./images/logout.svg').default %>" alt="лого выход">
+                    </button>
+                </div>
+            </section>
+           
+            <section class="author">
+                <img src="<%= require('./images/avatar.png').default %>" class="author__photo" alt="фото автора">
+                <div class="author__content">
+                  <h3 class="content__header">Об авторе</h3>
+                  <p class="author__description">
+                    Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, 
+                    чем вы занимаетесь, какими технологиями разработки владеете.
+                  </p>
+                  <p class="author__description">
+                    Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, 
+                    и чем можете помочь потенциальным заказчикам.
+                  </p>
+                </div>
+              </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copyrights">
+              © 2020 Supersite, Powered By News API
+            </p>
+            <div class="footer__navigation">
+                <a href="./index.html" class="footer__link">Главная</a>
+                <a target="_blank" href="https://praktikum.yandex.ru" class="footer__link footer__link_last">Яндекс.Практикум</a>
+                <div class="footer__icons">
+                    <a target="_blank" href="https://github.com/">
+                        <img src="<%= require('./images/icon/gh.svg').default %>" class="footer__icon" alt="github">
+                    </a>
+                    <a target="_blank" href="https://ru-ru.facebook.com/">
+                        <img src="<%= require('./images/icon/fb.svg').default %>" class="footer__icon" alt="facebook">
+                    </a>
+                </div>
+            </div>
+          </footer>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.popup__input {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+  height: 47px;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  padding: 0px 0;
+  margin: 0;
+  color: rgba(0, 0, 0, .8);
+  height: 30px;
+}
+
+.popup__input:invalid:not(:placeholder-shown) + .error-message {
+	display: block;
+}
+
+.popup__input:focus {
+  border-bottom: 1px solid #000;
+}

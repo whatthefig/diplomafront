@@ -1,0 +1,13 @@
+.header__menu{
+    display: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background:transparent;
+}
+
+@media screen and (max-width:649px) {
+    .header__menu {
+        display: block;
+    }
+}

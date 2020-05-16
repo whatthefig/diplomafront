@@ -1,0 +1,20 @@
+.content__article-text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    line-height: 22px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #1A1B22;
+    margin: 16px 0 0 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .content__article-text{
+        -webkit-line-clamp: 4;
+        margin: 10px 0 0 0;
+    }
+}

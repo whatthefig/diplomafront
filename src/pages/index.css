@@ -1,0 +1,73 @@
+﻿@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/author/author.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/results/results.css);
+@import url(../blocks/content/content.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/no-results/no-results.css);
+@import url(../blocks/articles/articles.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/error-message/error-message.css);
+@import url(../blocks/error-message/error-message_formed/error-message_formed.css);
+
+.page {
+  max-width: 1440px;
+  margin: 0px auto 0px;
+  background-repeat: no-repeat;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-image: url(../images/unsplash.jpg);
+}
+
+.page-two {
+  max-width: 1440px;
+  margin: 0px auto 0px;
+  background-repeat: no-repeat;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu-theme {
+  background: #1A1B22;
+}
+
+.hidden{
+  display: none;
+}
+.gap{
+  grid-column-gap: 5px;
+}
+
+.hidden-card{
+  display: none;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.bolt{
+  font-weight: 600;
+}
+
+@media screen and (max-width:768px) {
+  .page{
+    background-image: url(../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg);
+  }
+}
+
+@media screen and (max-width:400px) {
+  .page{
+    background-image: url(../images/unsplash-mobile.png);
+    background-size: contain;
+  }
+}

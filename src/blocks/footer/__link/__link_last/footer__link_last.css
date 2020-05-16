@@ -1,0 +1,7 @@
+@media screen and (max-width:449px) {
+    .footer__link_last{
+        order: 1;
+        margin-top: 20px;
+        margin-right: 115px;
+    }
+}

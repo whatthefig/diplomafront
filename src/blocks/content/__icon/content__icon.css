@@ -1,0 +1,12 @@
+.content__icon{
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    border-radius: 8px;
+    background-image: url(../../../images/flag-gray.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}

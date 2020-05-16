@@ -1,0 +1,8 @@
+.menu__navigation {
+    padding: 30px 5% 24px;
+    height: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+ }

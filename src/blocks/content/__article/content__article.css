@@ -1,0 +1,19 @@
+.content__article{
+    position: relative;
+    width: 88%;
+    margin: 10px auto 50px;
+    padding-top: 68%;
+}
+
+@media screen and (max-width:768px) {
+    .content__article{
+        width: 85.7%;
+        margin: 16px auto 46px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .content__article{
+        width: 88.89%;
+    }
+}

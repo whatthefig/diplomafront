@@ -1,0 +1,18 @@
+.header__navigation{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 32px;
+    align-items: center;
+}
+
+@media screen and (max-width:768px) {
+    .header__navigation {
+        grid-column-gap: 16px;
+    }
+}
+
+@media screen and (max-width:649px) {
+    .header__navigation {
+        display: block;
+    }
+}
