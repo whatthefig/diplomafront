@@ -1,7 +1,7 @@
 <h1>Дипломная работа. Адаптивная верстка и настойка webpack.</h1>
 
 
-*v0.0.1*
+*v0.0.2.0*
 
 
 https://whatthefig.github.io/diplomafront/
